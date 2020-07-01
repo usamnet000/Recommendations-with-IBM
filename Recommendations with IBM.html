@@ -17905,9 +17905,8 @@ True
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># to battle cold start issues, we need a subset of overlapping users and articles</span>
-<span class="n">train_common_idx</span> <span class="o">=</span> <span class="n">user_item_train</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">test_idx</span><span class="p">)</span>
-<span class="n">u_test</span> <span class="o">=</span> <span class="n">u_train</span><span class="p">[</span><span class="n">train_common_idx</span><span class="p">,</span> <span class="p">:]</span>
-
+<span class="c1">#train_common_idx = user_item_train.index.isin(test_idx)</span>
+<span class="c1">#u_test = u_train[train_common_idx, :]</span>
 <span class="c1">#vt_test = vt_train[:, user_item_train.columns.isin(test_arts)]</span>
 <span class="n">u_test</span> <span class="o">=</span> <span class="n">u_train</span><span class="p">[</span><span class="n">user_item_train</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">test_idx</span><span class="p">),</span> <span class="p">:]</span>
 <span class="n">test_col</span> <span class="o">=</span> <span class="n">user_item_test</span><span class="o">.</span><span class="n">columns</span>
